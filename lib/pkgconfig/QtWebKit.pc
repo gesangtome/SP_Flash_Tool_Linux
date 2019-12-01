@@ -1,0 +1,19 @@
+prefix=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtWebKit
+qt_config=lex yacc uic resources qt release incremental link_prl def_files_disabled exceptions no_mocdepend release stl qt_no_framework release shared dll largefile stl precompile_header mmx 3dnow sse sse2 sse3 dylib create_prl link_prl depend_includepath QTDIR_build building-libs depend_includepath standalone_package depend_includepath qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc x11 link_pkgconfig no_debug_info x11lib x11inc moc thread shared dll
+moc_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/moc
+uic_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/uic
+rcc_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/rcc
+lupdate_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/lupdate
+lrelease_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/lrelease
+
+Name: Qtwebkit
+Description: Qtwebkit Library
+Version: 4.7.3
+Libs: -L${libdir} -lQtWebKit 
+Libs.private: -L/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/lib -L../JavaScriptCore/release -L/usr/X11R6/lib64  -ljscore -lXrender -lphonon -L/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/lib -lQtDBus -lQtXml -L/usr/X11R6/lib64 -lQtGui -lQtNetwork -lQtCore -lpthread -lXrender -lfontconfig -lfreetype -lz -lXext -lX11 -lm  
+Cflags: -DQT_SHARED -I/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/include -I${includedir}
+Requires: QtCore QtGui QtNetwork
+

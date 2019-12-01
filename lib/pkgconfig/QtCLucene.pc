@@ -1,0 +1,19 @@
+prefix=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtCLucene
+qt_config=lex yacc uic resources qt release incremental link_prl def_files_disabled exceptions no_mocdepend release stl qt_no_framework release shared dll largefile stl precompile_header mmx 3dnow sse sse2 sse3 dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt depend_includepath qmake_cache target_qt hide_symbols create_libtool create_pc explicitlib qt warn_off hide_symbols moc thread shared dll
+moc_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/moc
+uic_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/uic
+rcc_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/rcc
+lupdate_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/lupdate
+lrelease_location=/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/bin/lrelease
+
+Name: Qtclucene
+Description: Qtclucene Library
+Version: 4.7.3
+Libs: -L${libdir} -lQtCLucene 
+Libs.private: -L/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/lib  -lQtCore -L/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/lib -lpthread   
+Cflags: -DQT_SHARED -I/proj/mtk80148/QtSDK_Linux/Desktop/Qt/473/gcc/include -I${includedir}
+Requires: QtCore
+

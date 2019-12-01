@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<flashtool-config version="2.0">
+    <general>
+        <chip-name>MT6755</chip-name>
+        <storage-type>EMMC</storage-type>
+        <download-agent>.\MTK_AllInOne_DA.bin</download-agent>
+        <scatter></scatter>
+        <authentication></authentication>
+        <certification></certification>
+        <rom-list></rom-list>
+        <connection type="BromUSB" high-speed="true" power="AutoDetect" timeout-count="3600000" com-port="" />
+    </general>
+    <commands>
+        <readback-withoutscatter>            
+            <readback-list>
+                <readback-rom-item   readback-partion="md1img">D:\tmp_load\20150604_md_standalone\201508_1\flashtool\readback\md1rom.img</readback-rom-item>
+                <readback-rom-item   readback-partion="md1dsp">D:\tmp_load\20150604_md_standalone\201508_1\flashtool\readback\md1dsp.img</readback-rom-item>
+				        <readback-rom-item   readback-partion="md1arm7">D:\tmp_load\20150604_md_standalone\201508_1\flashtool\readback\md1arm7.img</readback-rom-item>
+				        <readback-rom-item   readback-partion="md3img">D:\tmp_load\20150604_md_standalone\201508_1\flashtool\readback\md3rom.img</readback-rom-item>
+            </readback-list>
+        </readback-withoutscatter>
+    </commands>
+</flashtool-config>

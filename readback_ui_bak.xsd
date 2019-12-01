@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!-- define chip name data type -->
+  <xs:simpleType name="chipNameType">
+    <xs:restriction base="xs:token">
+	  <xs:pattern value="MT[0-9]{4}[A-Z]{0,1}|ELBRUS"/>
+	</xs:restriction>
+  </xs:simpleType>
+  
+  <!-- define storage data type -->
+  <xs:simpleType name="storageType">
+    <xs:restriction base="xs:token">
+	  <xs:pattern value="NAND|EMMC|UFS|NOR|SDMMC"/>
+	</xs:restriction>
+  </xs:simpleType>
+  
+  <!-- define general node data type -->
+  <xs:complexType name="generalType">
+    <xs:sequence>
+	  <xs:element name="chip-name" type="chipNameType"/>
+      <xs:element name="storage-type" type="storageType"/>
+	</xs:sequence>
+  </xs:complexType>
+  
+  <!-- define general node schema -->
+  <xs:element name="general" type="generalType"/>
+  
+  <!-- define readback-flag attribute schema -->
+  <xs:attribute name="readback-flag">
+    <xs:simpleType>
+	  <xs:restriction base="xs:token">
+	    <xs:pattern value="NULL_READ_PAGE_SPARE|NUTL_READ_PAGE_ONLY|NUTL_READ_SPARE_ONLY|NUTL_READ_PAGE_WITH_ECC|NUTL_VERIFY_AFTER_PROGRAM"/>
+	  </xs:restriction>
+	</xs:simpleType>
+  </xs:attribute>
+  
+  <!-- define addr-flag attribute schema -->
+  <xs:attribute name="addr-flag">
+    <xs:simpleType>
+	  <xs:restriction base="xs:token">
+	    <xs:pattern value="NUTL_ADDR_LOGICAL|NUTL_ADDR_PHYSICAL"/>
+	  </xs:restriction>
+	</xs:simpleType>
+  </xs:attribute>
+  
+  <!-- define part-id attribute schema -->
+  <xs:attribute name="part-id">
+    <xs:simpleType>
+	  <xs:restriction base="xs:integer">
+	    <xs:pattern value="[0-9]+"/>
+	  </xs:restriction>
+	</xs:simpleType>
+  </xs:attribute>
+  
+  <!-- define readback-rom-item node schema -->
+  <xs:element name="readback-rom-item">
+    <xs:complexType mixed="true">
+	  <xs:attribute name="readback-index" type="xs:integer"/>
+	  <xs:attribute name="readback-enable" type="xs:boolean"/>
+	  <xs:attribute ref="readback-flag"/>
+	  <xs:attribute name="start-address" type="xs:string"/>
+	  <xs:attribute name="readback-length" type="xs:string"/>
+	  <xs:attribute ref="addr-flag"/>
+	  <xs:attribute ref="part-id"/>
+	</xs:complexType>
+  </xs:element>
+  
+  <!-- define readback-list node data type -->
+  <xs:complexType name="readbackListType">
+    <xs:sequence>
+	  <xs:element ref="readback-rom-item" maxOccurs="unbounded"/>
+	</xs:sequence>
+  </xs:complexType>
+  
+  <!-- define readback-list node schema -->
+  <xs:element name="readback-list" type="readbackListType"/>
+  
+  <!-- define physical-readback node schema -->
+  <xs:element name="physical-readback">
+    <xs:complexType>
+	  <xs:attribute name="is-physical-readback" type="xs:boolean" use="required"/>
+	</xs:complexType>
+  </xs:element>
+  
+  <!-- define readback node data type -->
+  <xs:complexType name="readbackType">
+    <xs:sequence>
+	  <xs:element ref="physical-readback"/>
+	  <xs:element ref="readback-list" minOccurs="0"/>
+	</xs:sequence>
+  </xs:complexType>
+  
+  <!-- define readback node schema -->
+  <xs:element name="readback" type="readbackType"/>
+  
+  <!-- define commands node schema -->
+  <xs:element name="commands">
+    <xs:complexType>
+	  <xs:sequence>
+	    <xs:element ref="readback"/>
+	  </xs:sequence>
+	</xs:complexType>
+  </xs:element>
+  
+  <!-- define flashtool-config node data type -->
+  <xs:complexType name="flashToolConfigType">
+    <xs:sequence>
+	  <xs:element ref="general"/>
+	  <xs:element ref="commands"/>
+	</xs:sequence>
+	<xs:attribute name="version" type="xs:decimal" use="required"/>
+  </xs:complexType>
+  
+  <!-- define flashtool-config node schema -->
+  <xs:element name="flashtool-config" type="flashToolConfigType"/>
+</xs:schema>
