@@ -25,92 +25,63 @@
   <!-- define general node schema -->
   <xs:element name="general" type="generalType"/>
   
-  <!-- define readback-flag attribute schema -->
-  <xs:attribute name="readback-flag">
+  <!-- define region-text attribute schema -->
+  <xs:attribute name="region-text">
     <xs:simpleType>
 	  <xs:restriction base="xs:token">
-	    <xs:pattern value="NULL_READ_PAGE_SPARE|NUTL_READ_PAGE_ONLY|NUTL_READ_SPARE_ONLY|NUTL_READ_PAGE_WITH_ECC|NUTL_VERIFY_AFTER_PROGRAM"/>
+	    <xs:pattern value="EMMC-BOOT1|EMMC-BOOT2|EMMC-USER|UFS-LUA0|UFS-LUA1|UFS-LUA2|NAND-WHOLE"/>
 	  </xs:restriction>
 	</xs:simpleType>
   </xs:attribute>
   
-  <!-- define addr-flag attribute schema -->
-  <xs:attribute name="addr-flag">
-    <xs:simpleType>
-	  <xs:restriction base="xs:token">
-	    <xs:pattern value="NUTL_ADDR_LOGICAL|NUTL_ADDR_PHYSICAL"/>
-	  </xs:restriction>
-	</xs:simpleType>
-  </xs:attribute>
+  <xs:simpleType name="length_type">
+    <xs:restriction base="xs:string">
+	  <xs:pattern value="0x[0-9a-fA-F]{1,16}"/>
+	</xs:restriction>
+  </xs:simpleType>
   
-  <!-- define part-id attribute schema -->
-  <xs:attribute name="part-id">
-    <xs:simpleType>
-	  <xs:restriction base="xs:integer">
-	    <xs:pattern value="[0-9]+"/>
-	  </xs:restriction>
-	</xs:simpleType>
-  </xs:attribute>
-  
-  <!-- define readback-rom-item node schema -->
-  <xs:element name="readback-rom-item">
+  <!-- define readback-item node schema -->
+  <xs:element name="readback-item">
     <xs:complexType mixed="true">
-	  <xs:attribute name="readback-index" type="xs:integer"/>
-	  <xs:attribute name="readback-enable" type="xs:boolean"/>
-	  <xs:attribute ref="readback-flag"/>
-	  <xs:attribute name="start-address" type="xs:string"/>
-	  <xs:attribute name="readback-length" type="xs:string"/>
-	  <xs:attribute ref="addr-flag"/>
-	  <xs:attribute ref="part-id"/>
+	  <xs:attribute name="partition-name" type="xs:string" use="required"/>
+	  <xs:attribute name="start-addr" type="length_type" use="required"/>
+	  <xs:attribute name="enabled" type="xs:boolean" use="required"/>
+	  <xs:attribute ref="region-text" use="required"/>
+	  <xs:attribute name="length" type="length_type" use="required"/>
 	</xs:complexType>
   </xs:element>
   
-  <!-- define readback-list node data type -->
-  <xs:complexType name="readbackListType">
+  <!-- define readback list node data type -->
+  <xs:complexType name="readback-list-type">
     <xs:sequence>
-	  <xs:element ref="readback-rom-item" maxOccurs="unbounded"/>
+	  <xs:element ref="readback-item" minOccurs="0" maxOccurs="unbounded"/>
 	</xs:sequence>
   </xs:complexType>
   
-  <!-- define readback-list node schema -->
-  <xs:element name="readback-list" type="readbackListType"/>
-  
-  <!-- define physical-readback node schema -->
-  <xs:element name="physical-readback">
-    <xs:complexType>
-	  <xs:attribute name="is-physical-readback" type="xs:boolean" use="required"/>
-	</xs:complexType>
-  </xs:element>
-  
-  <!-- define readback node data type -->
-  <xs:complexType name="readbackType">
-    <xs:sequence>
-	  <xs:element ref="physical-readback"/>
-	  <xs:element ref="readback-list" minOccurs="0"/>
-	</xs:sequence>
-  </xs:complexType>
+  <!-- define manual-readback-list node schema -->
+  <xs:element name="manual-readback-list" type="readback-list-type"/>
+  <!-- define auto-readback-list node schema -->
+  <xs:element name="auto-readback-list" type="readback-list-type"/>
   
   <!-- define readback node schema -->
-  <xs:element name="readback" type="readbackType"/>
-  
-  <!-- define commands node schema -->
-  <xs:element name="commands">
+  <xs:element name="readback">
     <xs:complexType>
 	  <xs:sequence>
-	    <xs:element ref="readback"/>
+	    <xs:element ref="manual-readback-list"/>
+		<xs:element ref="auto-readback-list"/>
 	  </xs:sequence>
 	</xs:complexType>
   </xs:element>
   
-  <!-- define flashtool-config node data type -->
-  <xs:complexType name="flashToolConfigType">
+  <!-- define readback-backup node data type -->
+  <xs:complexType name="readback-backup-type">
     <xs:sequence>
 	  <xs:element ref="general"/>
-	  <xs:element ref="commands"/>
+	  <xs:element ref="readback"/>
 	</xs:sequence>
 	<xs:attribute name="version" type="xs:decimal" use="required"/>
   </xs:complexType>
   
-  <!-- define flashtool-config node schema -->
-  <xs:element name="flashtool-config" type="flashToolConfigType"/>
+  <!-- define readback-backup schema -->
+  <xs:element name="readback-backup" type="readback-backup-type"/>
 </xs:schema>

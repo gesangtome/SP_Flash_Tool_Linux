@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cflashtool-config version="1.0">
+    <general>
+        <connect-args baud_rate="" timeout_ms="3600000" com_port_name="" com_port_type="USB-PCIE" version="1.0" conn_stage="2nd DA">
+            <flash-xml>D:\Test\flash.xml</flash-xml>
+            <auth-file></auth-file>
+            <cert-file></cert-file>
+        </connect-args>
+        <runtime-parameter checksum_level="1" log_channel="UART" system_os="WINDOWS" da_log_level="INFO" battery_status="0" version="1.0"/>
+        <!--log_on: log switch, enable log if true, otherwise false;
+			log_path: the directory in which the log files has been stored;
+			clean_hours: the time setting to delete log files regularly, the unit is hours.-->
+        <log-info clean_hours="720" log_path="C:\ProgramData\C_FT_Logs" version="1.0"/>
+    </general>
+    <commands>
+        <WRITE-EFUSE version="1.0">
+            <source-file version="1.0" file_type="LOCAL_FILE" file_name="D:\Test\efuse.xml"/>
+        </WRITE-EFUSE>
+    </commands>
+</cflashtool-config>
