@@ -4,26 +4,6 @@
 
 Clone from spflashtools (https://spflashtools.com)
 
-
-### ( ! ) Install Dependency package
-
-flash_tool requires libpng12.so.0, So install package 'libpng12' before executing flash_tool.sh 
-
-debian:
-
-```
-sudo add-apt-repository ppa:linuxuprising/libpng12
-sudo apt update
-sudo apt install libpng12-0
-```
-
-redhat:
-
-```
-sudo dnf update
-sudo dnf install libpng12
-```
-
 ### ( ! ) Install udev rules
 
 To ensure that unprivileged users can use flash_tool over USB to operate mtk devices, install the udev rule before executing flash_tool.sh
@@ -38,7 +18,7 @@ sudo udevadm trigger
 
 ### ( * ) How to execute:
 ```
-chmod +x flash_tool.sh
+chmod +x SPFlashToolV6.sh
 
-./flash_tool.sh
+./SPFlashToolV6.sh
 ```
