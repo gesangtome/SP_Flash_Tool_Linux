@@ -8,5 +8,5 @@ Video Tutorial: https://www.youtube.com/watch?v=LDaJFdcjAIM
 
 ____________________________________
 
-Download SP Flash Tool for Linux
+Download SP Flash Tool for Windows
 https://spflashtools.com/category/windows

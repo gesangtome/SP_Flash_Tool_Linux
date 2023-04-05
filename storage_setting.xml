@@ -5,32 +5,7 @@
         <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
         <emmc type-name = "EMMC" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "8"></emmc>
         <sdmmc type-name = "SDMMC" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-	<platform name ="MT6572">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-    
-  <platform name ="MT6571">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-	<platform name ="MT6582">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-    <platform name ="MT6592">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
+    </platform>    
     <platform name ="MT6595">
 	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
         <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
@@ -43,25 +18,6 @@
         <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
         <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
         <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-    
-    <platform name ="MT6752">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-	    <platform name ="MT2601">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
-		<platform name ="MT6795">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
     </platform>
 		<platform name ="MT8173">
 	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
@@ -178,13 +134,6 @@
         <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
         <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
     </platform>
-    <platform name ="MT6799">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-        <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
-        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
     <platform name ="MT6759">
 	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
         <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
@@ -250,13 +199,6 @@
         <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
         <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
     </platform>
-    <platform name ="MT6775">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
-        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>
     <platform name ="MT6765">
 	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
 	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
@@ -298,13 +240,6 @@
         <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
         <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
         <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
-    </platform>   
-	<platform name ="MT3967">
-	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
-	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
-        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
-        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
-        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
     </platform>
     <platform name ="MT6761">
 	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
@@ -341,7 +276,77 @@
         <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
         <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
     </platform>	
-	<platform name ="MT6789">
+	<platform name ="MT6885">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+    <platform name ="MT8512">
+	    <nor type-name = "NOR" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT6873">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>	
+    <platform name ="MT0992">
+	    <nor type-name = "NOR" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT6853">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT6893">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT6877">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>	
+	<platform name ="MT6833">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT8696">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT8195">
+	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
+	    <ufs type-name = "UFS" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
+        <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>
+        <emmc type-name = "EMMC" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_EMMC" mem-storage-type = "HW_MEM_EMMC" storage-addressing-type = "16"></emmc>
+        <sdmmc type-name = "SDMMC" is-support = "true" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_SDMMC" mem-storage-type = "HW_MEM_SDMMC" storage-addressing-type = "8"></sdmmc>
+    </platform>
+	<platform name ="MT6781">
 	    <nor type-name = "NOR" is-support = "false" is-support-auto-format = "false" hw-storage-type = "HW_STORAGE_NOR" mem-storage-type = "HW_MEM_NOR" storage-addressing-type = "8"></nor>
 	    <ufs type-name = "UFS" is-support = "true" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_UFS" mem-storage-type = "HW_MEM_UFS" storage-addressing-type = "8"></ufs>
         <nand type-name = "NAND" is-support = "false" is-support-auto-format = "true" hw-storage-type = "HW_STORAGE_NAND" mem-storage-type = "HW_MEM_NAND" storage-addressing-type = "8"></nand>

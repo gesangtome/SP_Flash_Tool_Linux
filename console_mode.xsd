@@ -66,6 +66,7 @@
       <xs:attribute name="port" type="xs:string"/>
       <xs:attribute name="timeout-count" type="xs:integer"/>
       <xs:attribute name="com-port" type="xs:string"/>
+	  <xs:attribute name="storage_life_cycle_check" type="xs:boolean"/>
     </xs:complexType>
   </xs:element>
   
@@ -111,13 +112,15 @@
   <xs:element name="rsc-command">
     <xs:complexType>
 	  <xs:sequence>
+	  	<xs:element ref="rsc-path"/>
 	    <xs:element ref="rsc-index"/>
-		<xs:element ref="rsc-proj-name"/>
-		<xs:element ref="rsc-operator-name"/>
+			<xs:element ref="rsc-proj-name"/>
+			<xs:element ref="rsc-operator-name"/>
 	  </xs:sequence>
 	</xs:complexType>
   </xs:element>
   
+  <xs:element name="rsc-path" type="xs:string"/>
   <xs:element name="rsc-index" type="xs:integer"/>
   <xs:element name="rsc-proj-name" type="xs:string"/>
   <xs:element name="rsc-operator-name" type="xs:string"/>
@@ -362,7 +365,6 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="common-ctrl" minOccurs="0" maxOccurs="1"/>
-        <xs:element ref="sbc-pubk-ctrl" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="secure-ctrl" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="sbc-pub-key" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="sbc-pub-key1" minOccurs="0" maxOccurs="1"/>
@@ -370,7 +372,9 @@
 		<xs:element ref="sbc-pub-key3" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="common-lock" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="secure-lock" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="sbc-pubk-ctrl" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="usb-id" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="test-ctrl" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="efuse-ctl" minOccurs="0" maxOccurs="1"/>
 		<xs:element ref="sec_msc" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="c_lock" minOccurs="0" maxOccurs="1"/>
@@ -394,10 +398,14 @@
         <xs:element name="c_data3" type="hex_string" minOccurs="0" maxOccurs="1"/>
         <xs:element name="c_data4" type="hex_string" minOccurs="0" maxOccurs="1"/>
         <xs:element name="c_data5" type="hex_string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="c_data6" type="hex_string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="c_data7" type="hex_string" minOccurs="0" maxOccurs="1"/>
         <xs:element name="ac-key" type="hex_string" minOccurs="0" maxOccurs="1"/>
 		<xs:element name="custk" type="hex_string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="custid" type="hex_string" minOccurs="0" maxOccurs="1"/>
 		<xs:element ref="cm_flag" minOccurs="0" maxOccurs="1"/>
         <xs:element name="cust_crypt_data" type="hex_string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="cust_data" type="hex_string" minOccurs="0" maxOccurs="1"/>
 		<xs:element name="c_sw_ver0" type="hex_string" minOccurs="0" maxOccurs="1"/>
 		<xs:element name="c_sw_ver1" type="hex_string" minOccurs="0" maxOccurs="1"/>
 		<xs:element name="c_sw_ver2" type="hex_string" minOccurs="0" maxOccurs="1"/>
@@ -407,7 +415,7 @@
 	    <xs:element ref="stb-id" minOccurs="0" maxOccurs="1"/>
 	    <xs:element ref="stb-key-group" minOccurs="0" maxOccurs="1"/>		
 		<xs:element ref="run_time_blowing_config" minOccurs="0" maxOccurs="1"/>
-		    <xs:element ref="fa-ctrl" minOccurs="0" maxOccurs="1"/>
+		<xs:element ref="fa-ctrl" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="read-back" minOccurs="0" maxOccurs="1"/>		
       </xs:sequence>
     </xs:complexType>
@@ -430,17 +438,15 @@
 	  <xs:attribute name="Disable_SBC_PUBK_HASH3" type="xs:boolean"/>	  
     </xs:complexType>
   </xs:element>
-  
+
   <!--efuse sub-TAG definitions-->
   <xs:element name="sbc-pubk-ctrl">
     <xs:complexType>
-	    <xs:attribute name="sbc_pubk_hash1_lock" type="xs:boolean" />
-	    <xs:attribute name="sbc_pubk_hash2_lock" type="xs:boolean" />
-	    <xs:attribute name="sbc_pubk_hash3_lock" type="xs:boolean" />
-	    <xs:attribute name="Disable_SBC_PUBK_HASH" type="xs:boolean"/>
-	    <xs:attribute name="Disable_SBC_PUBK_HASH1" type="xs:boolean"/>
-	    <xs:attribute name="Disable_SBC_PUBK_HASH2" type="xs:boolean"/>
-	    <xs:attribute name="Disable_SBC_PUBK_HASH3" type="xs:boolean"/>	  
+	  <xs:attribute name="Disable_SBC_PUBK_HASH" type="xs:boolean"/>
+	  <xs:attribute name="Disable_SBC_PUBK_HASH1" type="xs:boolean"/>
+	  <xs:attribute name="Disable_SBC_PUBK_HASH2" type="xs:boolean"/>
+	  <xs:attribute name="Disable_SBC_PUBK_HASH3" type="xs:boolean"/>
+      <xs:attribute name="Disable_SBC_PUBK_HASH_FA" type="xs:boolean"/>
 	  <xs:attribute name="Disable_SBC_PUBK_HASH1_FA" type="xs:boolean"/>
 	  <xs:attribute name="Disable_SBC_PUBK_HASH2_FA" type="xs:boolean"/>
 	  <xs:attribute name="Disable_SBC_PUBK_HASH3_FA" type="xs:boolean"/>
@@ -470,6 +476,15 @@
       <xs:attribute name="Enable_JTAG_SEC_PASSWD" type="xs:boolean" />
       <xs:attribute name="Enable_PL_AR" type="xs:boolean" />
       <xs:attribute name="Enable_PK_CUS" type="xs:boolean" />
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="test-ctrl">
+    <xs:complexType>
+		<xs:sequence>
+			<xs:element name="test-pwd" type="hex_string" minOccurs="0" maxOccurs="1"/>
+       </xs:sequence>
+	   <xs:attribute name="test-valid" type="xs:boolean"/>
     </xs:complexType>
   </xs:element>
 
@@ -525,6 +540,7 @@
       <xs:attribute name="com_ctrl_lock" type="xs:boolean" />
       <xs:attribute name="usb_id_lock" type="xs:boolean" />
       <xs:attribute name="spare_lock" type="xs:boolean" />
+	  <xs:attribute name="test_pwd_lock" type="xs:boolean" />
     </xs:complexType>
   </xs:element>
 
@@ -540,6 +556,8 @@
 	  <xs:attribute name="sbc_pubk_hash2_lock" type="xs:boolean" />
 	  <xs:attribute name="sbc_pubk_hash3_lock" type="xs:boolean" />
 	  <xs:attribute name="cust_crypt_data_lock" type="xs:boolean" />
+	  <xs:attribute name="cust_data_lock" type="xs:boolean" />
+	  <xs:attribute name="sw_ver_lock" type="xs:boolean" />
     </xs:complexType>
   </xs:element>
 
@@ -565,6 +583,8 @@
        <xs:attribute name="c_data3_lock" type="xs:boolean"/>
        <xs:attribute name="c_data4_lock" type="xs:boolean"/>
        <xs:attribute name="c_data5_lock" type="xs:boolean"/>
+	   <xs:attribute name="c_data6_lock" type="xs:boolean"/>
+	   <xs:attribute name="c_data7_lock" type="xs:boolean"/>
 	   <xs:attribute name="c_ctrlm_lock" type="xs:boolean"/>
 	   <xs:attribute name="c_3p_pid_lock" type="xs:boolean"/>
 	   <xs:attribute name="c_3p_eppk_lock" type="xs:boolean"/>
