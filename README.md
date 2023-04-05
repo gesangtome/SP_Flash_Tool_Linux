@@ -24,6 +24,18 @@ sudo dnf update
 sudo dnf install libpng12
 ```
 
+### ( ! ) Install udev rules
+
+To ensure that unprivileged users can use flash_tool over USB to operate mtk devices, install the udev rule before executing flash_tool.sh
+
+```
+sudo install -m 644 99-ttyacms.rules /etc/udev/rules.d/99-ttyacms.rules
+
+sudo udevadm control --reload-rules
+
+sudo udevadm trigger
+```
+
 ### ( * ) How to execute:
 ```
 chmod +x flash_tool.sh
